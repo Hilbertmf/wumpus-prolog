@@ -1,0 +1,31 @@
+# Arquivos gerados
+*.class
+*.exe
+*.dll
+*.so
+*.o
+*.out
+
+# Logs e temporários
+*.log
+*.tmp
+*.swp
+
+# Pastas comuns de build ou IDE
+/build/
+/bin/
+/obj/
+/dist/
+/*.vscode/
+/*.idea/
+
+# Arquivos de backup
+*~
+*.bak
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos pessoais
+*.pl_history

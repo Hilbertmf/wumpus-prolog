@@ -1,0 +1,7378 @@
+Trial 1
+
+Executing initialize
+
+-----------------------------------------
+|         |         |         | W   P   |
+-----------------------------------------
+|         |       G |     P   |         |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|   A>    |         |         |     P   |
+-----------------------------------------
+agent_orientation(0)
+agent_health(alive)
+agent_arrows(1)
+agent_gold(0)
+--- init_agent: Starting ---
+  retractall_predicates: Starting...
+  retractall_predicates: Finished.
+--- init_agent: retractall_predicates completed ---
+  assertall_current: Starting...
+  assertall_current: Finished.
+--- init_agent: assertall_current completed ---
+--- init_agent: Finished ---
+  Try 1
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [no,no,no,no,no]
+Atoms = []
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,1), facing east, K=1
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: No stench. Retracting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: No breeze. Retracting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: No stench/breeze. Asserting adjacent as safe.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(1).
+
+:- dynamic position/3.
+
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+
+:- dynamic breeze/3.
+
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+
+:- dynamic pit_possible/2.
+
+
+:- dynamic has_arrow/0.
+
+has_arrow.
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+
+Log_action
+Action = goforward
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing goforward
+
+-----------------------------------------
+|         |         |         | W   P   |
+-----------------------------------------
+|         |       G |     P   |         |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |   A>    |         |     P   |
+-----------------------------------------
+agent_orientation(0)
+agent_health(alive)
+agent_arrows(1)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [no,no,no,no,no]
+Atoms = []
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,2), facing east, K=2
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: No stench. Retracting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: No breeze. Retracting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: No stench/breeze. Asserting adjacent as safe.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(2).
+
+:- dynamic position/3.
+
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+
+:- dynamic breeze/3.
+
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+
+:- dynamic pit_possible/2.
+
+
+:- dynamic has_arrow/0.
+
+has_arrow.
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+
+Log_action
+Action = goforward
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing goforward
+
+-----------------------------------------
+|         |         |         | W   P   |
+-----------------------------------------
+|         |       G |     P   |         |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         |   A>    |     P   |
+-----------------------------------------
+agent_orientation(0)
+agent_health(alive)
+agent_arrows(1)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [no,yes,no,no,no]
+Atoms = [breeze]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing east, K=3
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: No stench. Retracting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: Breeze detected. Asserting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(3).
+
+:- dynamic position/3.
+
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+
+:- dynamic breeze/3.
+
+breeze(_, _, 3).
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+
+:- dynamic pit_possible/2.
+
+pit_possible(1, 2).
+pit_possible(1, 4).
+pit_possible(2, 3).
+
+:- dynamic has_arrow/0.
+
+has_arrow.
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|         |         |         | W   P   |
+-----------------------------------------
+|         |       G |     P   |         |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         |   A^    |     P   |
+-----------------------------------------
+agent_orientation(90)
+agent_health(alive)
+agent_arrows(1)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [no,yes,no,no,no]
+Atoms = [breeze]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing north, K=4
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: No stench. Retracting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: Breeze detected. Asserting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(4).
+
+:- dynamic position/3.
+
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(north, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+
+:- dynamic breeze/3.
+
+breeze(_, _, 4).
+breeze(_, _, 3).
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+
+:- dynamic pit_possible/2.
+
+pit_possible(1, 2).
+pit_possible(1, 4).
+pit_possible(2, 3).
+
+:- dynamic has_arrow/0.
+
+has_arrow.
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|         |         |         | W   P   |
+-----------------------------------------
+|         |       G |     P   |         |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         |   <A    |     P   |
+-----------------------------------------
+agent_orientation(180)
+agent_health(alive)
+agent_arrows(1)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [no,yes,no,no,no]
+Atoms = [breeze]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing west, K=5
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: No stench. Retracting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: Breeze detected. Asserting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(5).
+
+:- dynamic position/3.
+
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(west, 5).
+orientation(north, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+
+:- dynamic breeze/3.
+
+breeze(_, _, 5).
+breeze(_, _, 4).
+breeze(_, _, 3).
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 4).
+act(turnleft, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+
+:- dynamic pit_possible/2.
+
+pit_possible(1, 2).
+pit_possible(1, 4).
+pit_possible(2, 3).
+
+:- dynamic has_arrow/0.
+
+has_arrow.
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|         |         |         | W   P   |
+-----------------------------------------
+|         |       G |     P   |         |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         |   Av    |     P   |
+-----------------------------------------
+agent_orientation(270)
+agent_health(alive)
+agent_arrows(1)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [no,yes,no,no,no]
+Atoms = [breeze]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing south, K=6
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: No stench. Retracting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: Breeze detected. Asserting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(6).
+
+:- dynamic position/3.
+
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(south, 6).
+orientation(west, 5).
+orientation(north, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+
+:- dynamic breeze/3.
+
+breeze(_, _, 6).
+breeze(_, _, 5).
+breeze(_, _, 4).
+breeze(_, _, 3).
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 5).
+act(turnleft, 4).
+act(turnleft, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+
+:- dynamic pit_possible/2.
+
+pit_possible(1, 2).
+pit_possible(1, 4).
+pit_possible(2, 3).
+
+:- dynamic has_arrow/0.
+
+has_arrow.
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|         |         |         | W   P   |
+-----------------------------------------
+|         |       G |     P   |         |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         |   A>    |     P   |
+-----------------------------------------
+agent_orientation(0)
+agent_health(alive)
+agent_arrows(1)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [no,yes,no,no,no]
+Atoms = [breeze]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing east, K=7
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: No stench. Retracting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: Breeze detected. Asserting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(7).
+
+:- dynamic position/3.
+
+position(1, 3, 7).
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(east, 7).
+orientation(south, 6).
+orientation(west, 5).
+orientation(north, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+
+:- dynamic breeze/3.
+
+breeze(_, _, 7).
+breeze(_, _, 6).
+breeze(_, _, 5).
+breeze(_, _, 4).
+breeze(_, _, 3).
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 6).
+act(turnleft, 5).
+act(turnleft, 4).
+act(turnleft, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+
+:- dynamic pit_possible/2.
+
+pit_possible(1, 2).
+pit_possible(1, 4).
+pit_possible(2, 3).
+
+:- dynamic has_arrow/0.
+
+has_arrow.
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|         |         |         | W   P   |
+-----------------------------------------
+|         |       G |     P   |         |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         |   A^    |     P   |
+-----------------------------------------
+agent_orientation(90)
+agent_health(alive)
+agent_arrows(1)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [no,yes,no,no,no]
+Atoms = [breeze]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing north, K=8
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: No stench. Retracting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: Breeze detected. Asserting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(8).
+
+:- dynamic position/3.
+
+position(1, 3, 8).
+position(1, 3, 7).
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(north, 8).
+orientation(east, 7).
+orientation(south, 6).
+orientation(west, 5).
+orientation(north, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+
+:- dynamic breeze/3.
+
+breeze(_, _, 8).
+breeze(_, _, 7).
+breeze(_, _, 6).
+breeze(_, _, 5).
+breeze(_, _, 4).
+breeze(_, _, 3).
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 7).
+act(turnleft, 6).
+act(turnleft, 5).
+act(turnleft, 4).
+act(turnleft, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+
+:- dynamic pit_possible/2.
+
+pit_possible(1, 2).
+pit_possible(1, 4).
+pit_possible(2, 3).
+
+:- dynamic has_arrow/0.
+
+has_arrow.
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|         |         |         | W   P   |
+-----------------------------------------
+|         |       G |     P   |         |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         |   <A    |     P   |
+-----------------------------------------
+agent_orientation(180)
+agent_health(alive)
+agent_arrows(1)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [no,yes,no,no,no]
+Atoms = [breeze]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing west, K=9
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: No stench. Retracting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: Breeze detected. Asserting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(9).
+
+:- dynamic position/3.
+
+position(1, 3, 9).
+position(1, 3, 8).
+position(1, 3, 7).
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(west, 9).
+orientation(north, 8).
+orientation(east, 7).
+orientation(south, 6).
+orientation(west, 5).
+orientation(north, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+
+:- dynamic breeze/3.
+
+breeze(_, _, 9).
+breeze(_, _, 8).
+breeze(_, _, 7).
+breeze(_, _, 6).
+breeze(_, _, 5).
+breeze(_, _, 4).
+breeze(_, _, 3).
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 8).
+act(turnleft, 7).
+act(turnleft, 6).
+act(turnleft, 5).
+act(turnleft, 4).
+act(turnleft, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+
+:- dynamic pit_possible/2.
+
+pit_possible(1, 2).
+pit_possible(1, 4).
+pit_possible(2, 3).
+
+:- dynamic has_arrow/0.
+
+has_arrow.
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|         |         |         | W   P   |
+-----------------------------------------
+|         |       G |     P   |         |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         |   Av    |     P   |
+-----------------------------------------
+agent_orientation(270)
+agent_health(alive)
+agent_arrows(1)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [no,yes,no,no,no]
+Atoms = [breeze]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing south, K=10
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: No stench. Retracting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: Breeze detected. Asserting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(10).
+
+:- dynamic position/3.
+
+position(1, 3, 10).
+position(1, 3, 9).
+position(1, 3, 8).
+position(1, 3, 7).
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(south, 10).
+orientation(west, 9).
+orientation(north, 8).
+orientation(east, 7).
+orientation(south, 6).
+orientation(west, 5).
+orientation(north, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+
+:- dynamic breeze/3.
+
+breeze(_, _, 10).
+breeze(_, _, 9).
+breeze(_, _, 8).
+breeze(_, _, 7).
+breeze(_, _, 6).
+breeze(_, _, 5).
+breeze(_, _, 4).
+breeze(_, _, 3).
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 9).
+act(turnleft, 8).
+act(turnleft, 7).
+act(turnleft, 6).
+act(turnleft, 5).
+act(turnleft, 4).
+act(turnleft, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+
+:- dynamic pit_possible/2.
+
+pit_possible(1, 2).
+pit_possible(1, 4).
+pit_possible(2, 3).
+
+:- dynamic has_arrow/0.
+
+has_arrow.
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|         |         |         | W   P   |
+-----------------------------------------
+|         |       G |     P   |         |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         |   A>    |     P   |
+-----------------------------------------
+agent_orientation(0)
+agent_health(alive)
+agent_arrows(1)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [no,yes,no,no,no]
+Atoms = [breeze]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing east, K=11
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: No stench. Retracting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: Breeze detected. Asserting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(11).
+
+:- dynamic position/3.
+
+position(1, 3, 11).
+position(1, 3, 10).
+position(1, 3, 9).
+position(1, 3, 8).
+position(1, 3, 7).
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(east, 11).
+orientation(south, 10).
+orientation(west, 9).
+orientation(north, 8).
+orientation(east, 7).
+orientation(south, 6).
+orientation(west, 5).
+orientation(north, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+
+:- dynamic breeze/3.
+
+breeze(_, _, 11).
+breeze(_, _, 10).
+breeze(_, _, 9).
+breeze(_, _, 8).
+breeze(_, _, 7).
+breeze(_, _, 6).
+breeze(_, _, 5).
+breeze(_, _, 4).
+breeze(_, _, 3).
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 10).
+act(turnleft, 9).
+act(turnleft, 8).
+act(turnleft, 7).
+act(turnleft, 6).
+act(turnleft, 5).
+act(turnleft, 4).
+act(turnleft, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+
+:- dynamic pit_possible/2.
+
+pit_possible(1, 2).
+pit_possible(1, 4).
+pit_possible(2, 3).
+
+:- dynamic has_arrow/0.
+
+has_arrow.
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|         |         |         | W   P   |
+-----------------------------------------
+|         |       G |     P   |         |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         |   A^    |     P   |
+-----------------------------------------
+agent_orientation(90)
+agent_health(alive)
+agent_arrows(1)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [no,yes,no,no,no]
+Atoms = [breeze]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing north, K=12
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: No stench. Retracting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: Breeze detected. Asserting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(12).
+
+:- dynamic position/3.
+
+position(1, 3, 12).
+position(1, 3, 11).
+position(1, 3, 10).
+position(1, 3, 9).
+position(1, 3, 8).
+position(1, 3, 7).
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(north, 12).
+orientation(east, 11).
+orientation(south, 10).
+orientation(west, 9).
+orientation(north, 8).
+orientation(east, 7).
+orientation(south, 6).
+orientation(west, 5).
+orientation(north, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+
+:- dynamic breeze/3.
+
+breeze(_, _, 12).
+breeze(_, _, 11).
+breeze(_, _, 10).
+breeze(_, _, 9).
+breeze(_, _, 8).
+breeze(_, _, 7).
+breeze(_, _, 6).
+breeze(_, _, 5).
+breeze(_, _, 4).
+breeze(_, _, 3).
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 11).
+act(turnleft, 10).
+act(turnleft, 9).
+act(turnleft, 8).
+act(turnleft, 7).
+act(turnleft, 6).
+act(turnleft, 5).
+act(turnleft, 4).
+act(turnleft, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+
+:- dynamic pit_possible/2.
+
+pit_possible(1, 2).
+pit_possible(1, 4).
+pit_possible(2, 3).
+
+:- dynamic has_arrow/0.
+
+has_arrow.
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|         |         |         | W   P   |
+-----------------------------------------
+|         |       G |     P   |         |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         |   <A    |     P   |
+-----------------------------------------
+agent_orientation(180)
+agent_health(alive)
+agent_arrows(1)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [no,yes,no,no,no]
+Atoms = [breeze]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing west, K=13
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: No stench. Retracting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: Breeze detected. Asserting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(13).
+
+:- dynamic position/3.
+
+position(1, 3, 13).
+position(1, 3, 12).
+position(1, 3, 11).
+position(1, 3, 10).
+position(1, 3, 9).
+position(1, 3, 8).
+position(1, 3, 7).
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(west, 13).
+orientation(north, 12).
+orientation(east, 11).
+orientation(south, 10).
+orientation(west, 9).
+orientation(north, 8).
+orientation(east, 7).
+orientation(south, 6).
+orientation(west, 5).
+orientation(north, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+
+:- dynamic breeze/3.
+
+breeze(_, _, 13).
+breeze(_, _, 12).
+breeze(_, _, 11).
+breeze(_, _, 10).
+breeze(_, _, 9).
+breeze(_, _, 8).
+breeze(_, _, 7).
+breeze(_, _, 6).
+breeze(_, _, 5).
+breeze(_, _, 4).
+breeze(_, _, 3).
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 12).
+act(turnleft, 11).
+act(turnleft, 10).
+act(turnleft, 9).
+act(turnleft, 8).
+act(turnleft, 7).
+act(turnleft, 6).
+act(turnleft, 5).
+act(turnleft, 4).
+act(turnleft, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+
+:- dynamic pit_possible/2.
+
+pit_possible(1, 2).
+pit_possible(1, 4).
+pit_possible(2, 3).
+
+:- dynamic has_arrow/0.
+
+has_arrow.
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|         |         |         | W   P   |
+-----------------------------------------
+|         |       G |     P   |         |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         |   Av    |     P   |
+-----------------------------------------
+agent_orientation(270)
+agent_health(alive)
+agent_arrows(1)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [no,yes,no,no,no]
+Atoms = [breeze]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing south, K=14
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: No stench. Retracting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: Breeze detected. Asserting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(14).
+
+:- dynamic position/3.
+
+position(1, 3, 14).
+position(1, 3, 13).
+position(1, 3, 12).
+position(1, 3, 11).
+position(1, 3, 10).
+position(1, 3, 9).
+position(1, 3, 8).
+position(1, 3, 7).
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(south, 14).
+orientation(west, 13).
+orientation(north, 12).
+orientation(east, 11).
+orientation(south, 10).
+orientation(west, 9).
+orientation(north, 8).
+orientation(east, 7).
+orientation(south, 6).
+orientation(west, 5).
+orientation(north, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+
+:- dynamic breeze/3.
+
+breeze(_, _, 14).
+breeze(_, _, 13).
+breeze(_, _, 12).
+breeze(_, _, 11).
+breeze(_, _, 10).
+breeze(_, _, 9).
+breeze(_, _, 8).
+breeze(_, _, 7).
+breeze(_, _, 6).
+breeze(_, _, 5).
+breeze(_, _, 4).
+breeze(_, _, 3).
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 13).
+act(turnleft, 12).
+act(turnleft, 11).
+act(turnleft, 10).
+act(turnleft, 9).
+act(turnleft, 8).
+act(turnleft, 7).
+act(turnleft, 6).
+act(turnleft, 5).
+act(turnleft, 4).
+act(turnleft, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+
+:- dynamic pit_possible/2.
+
+pit_possible(1, 2).
+pit_possible(1, 4).
+pit_possible(2, 3).
+
+:- dynamic has_arrow/0.
+
+has_arrow.
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|         |         |         | W   P   |
+-----------------------------------------
+|         |       G |     P   |         |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         |   A>    |     P   |
+-----------------------------------------
+agent_orientation(0)
+agent_health(alive)
+agent_arrows(1)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [no,yes,no,no,no]
+Atoms = [breeze]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing east, K=15
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: No stench. Retracting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: Breeze detected. Asserting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(15).
+
+:- dynamic position/3.
+
+position(1, 3, 15).
+position(1, 3, 14).
+position(1, 3, 13).
+position(1, 3, 12).
+position(1, 3, 11).
+position(1, 3, 10).
+position(1, 3, 9).
+position(1, 3, 8).
+position(1, 3, 7).
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(east, 15).
+orientation(south, 14).
+orientation(west, 13).
+orientation(north, 12).
+orientation(east, 11).
+orientation(south, 10).
+orientation(west, 9).
+orientation(north, 8).
+orientation(east, 7).
+orientation(south, 6).
+orientation(west, 5).
+orientation(north, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+
+:- dynamic breeze/3.
+
+breeze(_, _, 15).
+breeze(_, _, 14).
+breeze(_, _, 13).
+breeze(_, _, 12).
+breeze(_, _, 11).
+breeze(_, _, 10).
+breeze(_, _, 9).
+breeze(_, _, 8).
+breeze(_, _, 7).
+breeze(_, _, 6).
+breeze(_, _, 5).
+breeze(_, _, 4).
+breeze(_, _, 3).
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 14).
+act(turnleft, 13).
+act(turnleft, 12).
+act(turnleft, 11).
+act(turnleft, 10).
+act(turnleft, 9).
+act(turnleft, 8).
+act(turnleft, 7).
+act(turnleft, 6).
+act(turnleft, 5).
+act(turnleft, 4).
+act(turnleft, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+
+:- dynamic pit_possible/2.
+
+pit_possible(1, 2).
+pit_possible(1, 4).
+pit_possible(2, 3).
+
+:- dynamic has_arrow/0.
+
+has_arrow.
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|         |         |         | W   P   |
+-----------------------------------------
+|         |       G |     P   |         |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         |   A^    |     P   |
+-----------------------------------------
+agent_orientation(90)
+agent_health(alive)
+agent_arrows(1)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [no,yes,no,no,no]
+Atoms = [breeze]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing north, K=16
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: No stench. Retracting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: Breeze detected. Asserting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(16).
+
+:- dynamic position/3.
+
+position(1, 3, 16).
+position(1, 3, 15).
+position(1, 3, 14).
+position(1, 3, 13).
+position(1, 3, 12).
+position(1, 3, 11).
+position(1, 3, 10).
+position(1, 3, 9).
+position(1, 3, 8).
+position(1, 3, 7).
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(north, 16).
+orientation(east, 15).
+orientation(south, 14).
+orientation(west, 13).
+orientation(north, 12).
+orientation(east, 11).
+orientation(south, 10).
+orientation(west, 9).
+orientation(north, 8).
+orientation(east, 7).
+orientation(south, 6).
+orientation(west, 5).
+orientation(north, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+
+:- dynamic breeze/3.
+
+breeze(_, _, 16).
+breeze(_, _, 15).
+breeze(_, _, 14).
+breeze(_, _, 13).
+breeze(_, _, 12).
+breeze(_, _, 11).
+breeze(_, _, 10).
+breeze(_, _, 9).
+breeze(_, _, 8).
+breeze(_, _, 7).
+breeze(_, _, 6).
+breeze(_, _, 5).
+breeze(_, _, 4).
+breeze(_, _, 3).
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 15).
+act(turnleft, 14).
+act(turnleft, 13).
+act(turnleft, 12).
+act(turnleft, 11).
+act(turnleft, 10).
+act(turnleft, 9).
+act(turnleft, 8).
+act(turnleft, 7).
+act(turnleft, 6).
+act(turnleft, 5).
+act(turnleft, 4).
+act(turnleft, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+
+:- dynamic pit_possible/2.
+
+pit_possible(1, 2).
+pit_possible(1, 4).
+pit_possible(2, 3).
+
+:- dynamic has_arrow/0.
+
+has_arrow.
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|         |         |         | W   P   |
+-----------------------------------------
+|         |       G |     P   |         |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         |   <A    |     P   |
+-----------------------------------------
+agent_orientation(180)
+agent_health(alive)
+agent_arrows(1)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [no,yes,no,no,no]
+Atoms = [breeze]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing west, K=17
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: No stench. Retracting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: Breeze detected. Asserting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(17).
+
+:- dynamic position/3.
+
+position(1, 3, 17).
+position(1, 3, 16).
+position(1, 3, 15).
+position(1, 3, 14).
+position(1, 3, 13).
+position(1, 3, 12).
+position(1, 3, 11).
+position(1, 3, 10).
+position(1, 3, 9).
+position(1, 3, 8).
+position(1, 3, 7).
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(west, 17).
+orientation(north, 16).
+orientation(east, 15).
+orientation(south, 14).
+orientation(west, 13).
+orientation(north, 12).
+orientation(east, 11).
+orientation(south, 10).
+orientation(west, 9).
+orientation(north, 8).
+orientation(east, 7).
+orientation(south, 6).
+orientation(west, 5).
+orientation(north, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+
+:- dynamic breeze/3.
+
+breeze(_, _, 17).
+breeze(_, _, 16).
+breeze(_, _, 15).
+breeze(_, _, 14).
+breeze(_, _, 13).
+breeze(_, _, 12).
+breeze(_, _, 11).
+breeze(_, _, 10).
+breeze(_, _, 9).
+breeze(_, _, 8).
+breeze(_, _, 7).
+breeze(_, _, 6).
+breeze(_, _, 5).
+breeze(_, _, 4).
+breeze(_, _, 3).
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 16).
+act(turnleft, 15).
+act(turnleft, 14).
+act(turnleft, 13).
+act(turnleft, 12).
+act(turnleft, 11).
+act(turnleft, 10).
+act(turnleft, 9).
+act(turnleft, 8).
+act(turnleft, 7).
+act(turnleft, 6).
+act(turnleft, 5).
+act(turnleft, 4).
+act(turnleft, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+
+:- dynamic pit_possible/2.
+
+pit_possible(1, 2).
+pit_possible(1, 4).
+pit_possible(2, 3).
+
+:- dynamic has_arrow/0.
+
+has_arrow.
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|         |         |         | W   P   |
+-----------------------------------------
+|         |       G |     P   |         |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         |   Av    |     P   |
+-----------------------------------------
+agent_orientation(270)
+agent_health(alive)
+agent_arrows(1)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [no,yes,no,no,no]
+Atoms = [breeze]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing south, K=18
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: No stench. Retracting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: Breeze detected. Asserting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(18).
+
+:- dynamic position/3.
+
+position(1, 3, 18).
+position(1, 3, 17).
+position(1, 3, 16).
+position(1, 3, 15).
+position(1, 3, 14).
+position(1, 3, 13).
+position(1, 3, 12).
+position(1, 3, 11).
+position(1, 3, 10).
+position(1, 3, 9).
+position(1, 3, 8).
+position(1, 3, 7).
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(south, 18).
+orientation(west, 17).
+orientation(north, 16).
+orientation(east, 15).
+orientation(south, 14).
+orientation(west, 13).
+orientation(north, 12).
+orientation(east, 11).
+orientation(south, 10).
+orientation(west, 9).
+orientation(north, 8).
+orientation(east, 7).
+orientation(south, 6).
+orientation(west, 5).
+orientation(north, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+
+:- dynamic breeze/3.
+
+breeze(_, _, 18).
+breeze(_, _, 17).
+breeze(_, _, 16).
+breeze(_, _, 15).
+breeze(_, _, 14).
+breeze(_, _, 13).
+breeze(_, _, 12).
+breeze(_, _, 11).
+breeze(_, _, 10).
+breeze(_, _, 9).
+breeze(_, _, 8).
+breeze(_, _, 7).
+breeze(_, _, 6).
+breeze(_, _, 5).
+breeze(_, _, 4).
+breeze(_, _, 3).
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 17).
+act(turnleft, 16).
+act(turnleft, 15).
+act(turnleft, 14).
+act(turnleft, 13).
+act(turnleft, 12).
+act(turnleft, 11).
+act(turnleft, 10).
+act(turnleft, 9).
+act(turnleft, 8).
+act(turnleft, 7).
+act(turnleft, 6).
+act(turnleft, 5).
+act(turnleft, 4).
+act(turnleft, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+
+:- dynamic pit_possible/2.
+
+pit_possible(1, 2).
+pit_possible(1, 4).
+pit_possible(2, 3).
+
+:- dynamic has_arrow/0.
+
+has_arrow.
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|         |         |         | W   P   |
+-----------------------------------------
+|         |       G |     P   |         |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         |   A>    |     P   |
+-----------------------------------------
+agent_orientation(0)
+agent_health(alive)
+agent_arrows(1)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [no,yes,no,no,no]
+Atoms = [breeze]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing east, K=19
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: No stench. Retracting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: Breeze detected. Asserting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(19).
+
+:- dynamic position/3.
+
+position(1, 3, 19).
+position(1, 3, 18).
+position(1, 3, 17).
+position(1, 3, 16).
+position(1, 3, 15).
+position(1, 3, 14).
+position(1, 3, 13).
+position(1, 3, 12).
+position(1, 3, 11).
+position(1, 3, 10).
+position(1, 3, 9).
+position(1, 3, 8).
+position(1, 3, 7).
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(east, 19).
+orientation(south, 18).
+orientation(west, 17).
+orientation(north, 16).
+orientation(east, 15).
+orientation(south, 14).
+orientation(west, 13).
+orientation(north, 12).
+orientation(east, 11).
+orientation(south, 10).
+orientation(west, 9).
+orientation(north, 8).
+orientation(east, 7).
+orientation(south, 6).
+orientation(west, 5).
+orientation(north, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+
+:- dynamic breeze/3.
+
+breeze(_, _, 19).
+breeze(_, _, 18).
+breeze(_, _, 17).
+breeze(_, _, 16).
+breeze(_, _, 15).
+breeze(_, _, 14).
+breeze(_, _, 13).
+breeze(_, _, 12).
+breeze(_, _, 11).
+breeze(_, _, 10).
+breeze(_, _, 9).
+breeze(_, _, 8).
+breeze(_, _, 7).
+breeze(_, _, 6).
+breeze(_, _, 5).
+breeze(_, _, 4).
+breeze(_, _, 3).
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 18).
+act(turnleft, 17).
+act(turnleft, 16).
+act(turnleft, 15).
+act(turnleft, 14).
+act(turnleft, 13).
+act(turnleft, 12).
+act(turnleft, 11).
+act(turnleft, 10).
+act(turnleft, 9).
+act(turnleft, 8).
+act(turnleft, 7).
+act(turnleft, 6).
+act(turnleft, 5).
+act(turnleft, 4).
+act(turnleft, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+
+:- dynamic pit_possible/2.
+
+pit_possible(1, 2).
+pit_possible(1, 4).
+pit_possible(2, 3).
+
+:- dynamic has_arrow/0.
+
+has_arrow.
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|         |         |         | W   P   |
+-----------------------------------------
+|         |       G |     P   |         |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         |   A^    |     P   |
+-----------------------------------------
+agent_orientation(90)
+agent_health(alive)
+agent_arrows(1)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [no,yes,no,no,no]
+Atoms = [breeze]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing north, K=20
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: No stench. Retracting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: Breeze detected. Asserting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(20).
+
+:- dynamic position/3.
+
+position(1, 3, 20).
+position(1, 3, 19).
+position(1, 3, 18).
+position(1, 3, 17).
+position(1, 3, 16).
+position(1, 3, 15).
+position(1, 3, 14).
+position(1, 3, 13).
+position(1, 3, 12).
+position(1, 3, 11).
+position(1, 3, 10).
+position(1, 3, 9).
+position(1, 3, 8).
+position(1, 3, 7).
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(north, 20).
+orientation(east, 19).
+orientation(south, 18).
+orientation(west, 17).
+orientation(north, 16).
+orientation(east, 15).
+orientation(south, 14).
+orientation(west, 13).
+orientation(north, 12).
+orientation(east, 11).
+orientation(south, 10).
+orientation(west, 9).
+orientation(north, 8).
+orientation(east, 7).
+orientation(south, 6).
+orientation(west, 5).
+orientation(north, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+
+:- dynamic breeze/3.
+
+breeze(_, _, 20).
+breeze(_, _, 19).
+breeze(_, _, 18).
+breeze(_, _, 17).
+breeze(_, _, 16).
+breeze(_, _, 15).
+breeze(_, _, 14).
+breeze(_, _, 13).
+breeze(_, _, 12).
+breeze(_, _, 11).
+breeze(_, _, 10).
+breeze(_, _, 9).
+breeze(_, _, 8).
+breeze(_, _, 7).
+breeze(_, _, 6).
+breeze(_, _, 5).
+breeze(_, _, 4).
+breeze(_, _, 3).
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 19).
+act(turnleft, 18).
+act(turnleft, 17).
+act(turnleft, 16).
+act(turnleft, 15).
+act(turnleft, 14).
+act(turnleft, 13).
+act(turnleft, 12).
+act(turnleft, 11).
+act(turnleft, 10).
+act(turnleft, 9).
+act(turnleft, 8).
+act(turnleft, 7).
+act(turnleft, 6).
+act(turnleft, 5).
+act(turnleft, 4).
+act(turnleft, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+
+:- dynamic pit_possible/2.
+
+pit_possible(1, 2).
+pit_possible(1, 4).
+pit_possible(2, 3).
+
+:- dynamic has_arrow/0.
+
+has_arrow.
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|         |         |         | W   P   |
+-----------------------------------------
+|         |       G |     P   |         |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         |   <A    |     P   |
+-----------------------------------------
+agent_orientation(180)
+agent_health(alive)
+agent_arrows(1)
+agent_gold(0)
+
+Executing restart
+
+-----------------------------------------
+|         |         |         | W   P   |
+-----------------------------------------
+|         |       G |     P   |         |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|   A>    |         |         |     P   |
+-----------------------------------------
+agent_orientation(0)
+agent_health(alive)
+agent_arrows(1)
+agent_gold(0)
+--- restart_agent: Starting ---
+--- init_agent: Starting ---
+  retractall_predicates: Starting...
+  retractall_predicates: Finished.
+--- init_agent: retractall_predicates completed ---
+  assertall_current: Starting...
+  assertall_current: Finished.
+--- init_agent: assertall_current completed ---
+--- init_agent: Finished ---
+--- restart_agent: Finished ---
+  Actions = []
+Trial 1
+
+Executing initialize
+
+-----------------------------------------
+|     P   |         |         |       G |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         | W       |         |
+-----------------------------------------
+|   A>    |         |         |         |
+-----------------------------------------
+agent_orientation(0)
+agent_health(alive)
+agent_arrows(1)
+agent_gold(0)
+--- init_agent: Starting ---
+  retractall_predicates: Starting...
+  retractall_predicates: Finished.
+--- init_agent: retractall_predicates completed ---
+  assertall_current: Starting...
+  assertall_current: Finished.
+--- init_agent: assertall_current completed ---
+--- init_agent: Finished ---
+  Try 1
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [no,no,no,no,no]
+Atoms = []
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,1), facing east, K=1
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: No stench. Retracting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: No breeze. Retracting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: No stench/breeze. Asserting adjacent as safe.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(1).
+
+:- dynamic position/3.
+
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+
+:- dynamic breeze/3.
+
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+
+:- dynamic pit_possible/2.
+
+
+:- dynamic has_arrow/0.
+
+has_arrow.
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+
+Log_action
+Action = goforward
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing goforward
+
+-----------------------------------------
+|     P   |         |         |       G |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         | W       |         |
+-----------------------------------------
+|         |   A>    |         |         |
+-----------------------------------------
+agent_orientation(0)
+agent_health(alive)
+agent_arrows(1)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [no,no,no,no,no]
+Atoms = []
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,2), facing east, K=2
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: No stench. Retracting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: No breeze. Retracting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: No stench/breeze. Asserting adjacent as safe.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(2).
+
+:- dynamic position/3.
+
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+
+:- dynamic breeze/3.
+
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+
+:- dynamic pit_possible/2.
+
+
+:- dynamic has_arrow/0.
+
+has_arrow.
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+
+Log_action
+Action = goforward
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing goforward
+
+-----------------------------------------
+|     P   |         |         |       G |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         | W       |         |
+-----------------------------------------
+|         |         |   A>    |         |
+-----------------------------------------
+agent_orientation(0)
+agent_health(alive)
+agent_arrows(1)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [yes,no,no,no,no]
+Atoms = [stench]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing east, K=3
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: Stench detected. Asserting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: No breeze. Retracting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(3).
+
+:- dynamic position/3.
+
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+stench(_, _, 3).
+
+:- dynamic breeze/3.
+
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+wumpus_possible(1, 2).
+wumpus_possible(1, 4).
+wumpus_possible(2, 3).
+
+:- dynamic pit_possible/2.
+
+
+:- dynamic has_arrow/0.
+
+has_arrow.
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+
+Log_action
+Action = shoot
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+You now have 0 arrow(s).
+
+Executing shoot
+
+-----------------------------------------
+|     P   |         |         |       G |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         | W       |         |
+-----------------------------------------
+|         |         |   A>    |         |
+-----------------------------------------
+agent_orientation(0)
+agent_health(alive)
+agent_arrows(0)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [yes,no,no,no,no]
+Atoms = [stench]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing east, K=4
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: Stench detected. Asserting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: No breeze. Retracting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(4).
+
+:- dynamic position/3.
+
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(east, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+stench(_, _, 4).
+stench(_, _, 3).
+
+:- dynamic breeze/3.
+
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(shoot, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+wumpus_possible(1, 2).
+wumpus_possible(1, 4).
+wumpus_possible(2, 3).
+
+:- dynamic pit_possible/2.
+
+
+:- dynamic has_arrow/0.
+
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|     P   |         |         |       G |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         | W       |         |
+-----------------------------------------
+|         |         |   A^    |         |
+-----------------------------------------
+agent_orientation(90)
+agent_health(alive)
+agent_arrows(0)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [yes,no,no,no,no]
+Atoms = [stench]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing north, K=5
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: Stench detected. Asserting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: No breeze. Retracting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(5).
+
+:- dynamic position/3.
+
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(north, 5).
+orientation(east, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+stench(_, _, 5).
+stench(_, _, 4).
+stench(_, _, 3).
+
+:- dynamic breeze/3.
+
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 4).
+act(shoot, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+wumpus_possible(1, 2).
+wumpus_possible(1, 4).
+wumpus_possible(2, 3).
+
+:- dynamic pit_possible/2.
+
+
+:- dynamic has_arrow/0.
+
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|     P   |         |         |       G |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         | W       |         |
+-----------------------------------------
+|         |         |   <A    |         |
+-----------------------------------------
+agent_orientation(180)
+agent_health(alive)
+agent_arrows(0)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [yes,no,no,no,no]
+Atoms = [stench]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing west, K=6
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: Stench detected. Asserting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: No breeze. Retracting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(6).
+
+:- dynamic position/3.
+
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(west, 6).
+orientation(north, 5).
+orientation(east, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+stench(_, _, 6).
+stench(_, _, 5).
+stench(_, _, 4).
+stench(_, _, 3).
+
+:- dynamic breeze/3.
+
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 5).
+act(turnleft, 4).
+act(shoot, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+wumpus_possible(1, 2).
+wumpus_possible(1, 4).
+wumpus_possible(2, 3).
+
+:- dynamic pit_possible/2.
+
+
+:- dynamic has_arrow/0.
+
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|     P   |         |         |       G |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         | W       |         |
+-----------------------------------------
+|         |         |   Av    |         |
+-----------------------------------------
+agent_orientation(270)
+agent_health(alive)
+agent_arrows(0)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [yes,no,no,no,no]
+Atoms = [stench]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing south, K=7
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: Stench detected. Asserting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: No breeze. Retracting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(7).
+
+:- dynamic position/3.
+
+position(1, 3, 7).
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(south, 7).
+orientation(west, 6).
+orientation(north, 5).
+orientation(east, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+stench(_, _, 7).
+stench(_, _, 6).
+stench(_, _, 5).
+stench(_, _, 4).
+stench(_, _, 3).
+
+:- dynamic breeze/3.
+
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 6).
+act(turnleft, 5).
+act(turnleft, 4).
+act(shoot, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+wumpus_possible(1, 2).
+wumpus_possible(1, 4).
+wumpus_possible(2, 3).
+
+:- dynamic pit_possible/2.
+
+
+:- dynamic has_arrow/0.
+
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|     P   |         |         |       G |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         | W       |         |
+-----------------------------------------
+|         |         |   A>    |         |
+-----------------------------------------
+agent_orientation(0)
+agent_health(alive)
+agent_arrows(0)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [yes,no,no,no,no]
+Atoms = [stench]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing east, K=8
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: Stench detected. Asserting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: No breeze. Retracting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(8).
+
+:- dynamic position/3.
+
+position(1, 3, 8).
+position(1, 3, 7).
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(east, 8).
+orientation(south, 7).
+orientation(west, 6).
+orientation(north, 5).
+orientation(east, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+stench(_, _, 8).
+stench(_, _, 7).
+stench(_, _, 6).
+stench(_, _, 5).
+stench(_, _, 4).
+stench(_, _, 3).
+
+:- dynamic breeze/3.
+
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 7).
+act(turnleft, 6).
+act(turnleft, 5).
+act(turnleft, 4).
+act(shoot, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+wumpus_possible(1, 2).
+wumpus_possible(1, 4).
+wumpus_possible(2, 3).
+
+:- dynamic pit_possible/2.
+
+
+:- dynamic has_arrow/0.
+
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|     P   |         |         |       G |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         | W       |         |
+-----------------------------------------
+|         |         |   A^    |         |
+-----------------------------------------
+agent_orientation(90)
+agent_health(alive)
+agent_arrows(0)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [yes,no,no,no,no]
+Atoms = [stench]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing north, K=9
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: Stench detected. Asserting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: No breeze. Retracting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(9).
+
+:- dynamic position/3.
+
+position(1, 3, 9).
+position(1, 3, 8).
+position(1, 3, 7).
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(north, 9).
+orientation(east, 8).
+orientation(south, 7).
+orientation(west, 6).
+orientation(north, 5).
+orientation(east, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+stench(_, _, 9).
+stench(_, _, 8).
+stench(_, _, 7).
+stench(_, _, 6).
+stench(_, _, 5).
+stench(_, _, 4).
+stench(_, _, 3).
+
+:- dynamic breeze/3.
+
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 8).
+act(turnleft, 7).
+act(turnleft, 6).
+act(turnleft, 5).
+act(turnleft, 4).
+act(shoot, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+wumpus_possible(1, 2).
+wumpus_possible(1, 4).
+wumpus_possible(2, 3).
+
+:- dynamic pit_possible/2.
+
+
+:- dynamic has_arrow/0.
+
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|     P   |         |         |       G |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         | W       |         |
+-----------------------------------------
+|         |         |   <A    |         |
+-----------------------------------------
+agent_orientation(180)
+agent_health(alive)
+agent_arrows(0)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [yes,no,no,no,no]
+Atoms = [stench]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing west, K=10
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: Stench detected. Asserting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: No breeze. Retracting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(10).
+
+:- dynamic position/3.
+
+position(1, 3, 10).
+position(1, 3, 9).
+position(1, 3, 8).
+position(1, 3, 7).
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(west, 10).
+orientation(north, 9).
+orientation(east, 8).
+orientation(south, 7).
+orientation(west, 6).
+orientation(north, 5).
+orientation(east, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+stench(_, _, 10).
+stench(_, _, 9).
+stench(_, _, 8).
+stench(_, _, 7).
+stench(_, _, 6).
+stench(_, _, 5).
+stench(_, _, 4).
+stench(_, _, 3).
+
+:- dynamic breeze/3.
+
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 9).
+act(turnleft, 8).
+act(turnleft, 7).
+act(turnleft, 6).
+act(turnleft, 5).
+act(turnleft, 4).
+act(shoot, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+wumpus_possible(1, 2).
+wumpus_possible(1, 4).
+wumpus_possible(2, 3).
+
+:- dynamic pit_possible/2.
+
+
+:- dynamic has_arrow/0.
+
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|     P   |         |         |       G |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         | W       |         |
+-----------------------------------------
+|         |         |   Av    |         |
+-----------------------------------------
+agent_orientation(270)
+agent_health(alive)
+agent_arrows(0)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [yes,no,no,no,no]
+Atoms = [stench]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing south, K=11
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: Stench detected. Asserting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: No breeze. Retracting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(11).
+
+:- dynamic position/3.
+
+position(1, 3, 11).
+position(1, 3, 10).
+position(1, 3, 9).
+position(1, 3, 8).
+position(1, 3, 7).
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(south, 11).
+orientation(west, 10).
+orientation(north, 9).
+orientation(east, 8).
+orientation(south, 7).
+orientation(west, 6).
+orientation(north, 5).
+orientation(east, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+stench(_, _, 11).
+stench(_, _, 10).
+stench(_, _, 9).
+stench(_, _, 8).
+stench(_, _, 7).
+stench(_, _, 6).
+stench(_, _, 5).
+stench(_, _, 4).
+stench(_, _, 3).
+
+:- dynamic breeze/3.
+
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 10).
+act(turnleft, 9).
+act(turnleft, 8).
+act(turnleft, 7).
+act(turnleft, 6).
+act(turnleft, 5).
+act(turnleft, 4).
+act(shoot, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+wumpus_possible(1, 2).
+wumpus_possible(1, 4).
+wumpus_possible(2, 3).
+
+:- dynamic pit_possible/2.
+
+
+:- dynamic has_arrow/0.
+
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|     P   |         |         |       G |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         | W       |         |
+-----------------------------------------
+|         |         |   A>    |         |
+-----------------------------------------
+agent_orientation(0)
+agent_health(alive)
+agent_arrows(0)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [yes,no,no,no,no]
+Atoms = [stench]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing east, K=12
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: Stench detected. Asserting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: No breeze. Retracting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(12).
+
+:- dynamic position/3.
+
+position(1, 3, 12).
+position(1, 3, 11).
+position(1, 3, 10).
+position(1, 3, 9).
+position(1, 3, 8).
+position(1, 3, 7).
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(east, 12).
+orientation(south, 11).
+orientation(west, 10).
+orientation(north, 9).
+orientation(east, 8).
+orientation(south, 7).
+orientation(west, 6).
+orientation(north, 5).
+orientation(east, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+stench(_, _, 12).
+stench(_, _, 11).
+stench(_, _, 10).
+stench(_, _, 9).
+stench(_, _, 8).
+stench(_, _, 7).
+stench(_, _, 6).
+stench(_, _, 5).
+stench(_, _, 4).
+stench(_, _, 3).
+
+:- dynamic breeze/3.
+
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 11).
+act(turnleft, 10).
+act(turnleft, 9).
+act(turnleft, 8).
+act(turnleft, 7).
+act(turnleft, 6).
+act(turnleft, 5).
+act(turnleft, 4).
+act(shoot, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+wumpus_possible(1, 2).
+wumpus_possible(1, 4).
+wumpus_possible(2, 3).
+
+:- dynamic pit_possible/2.
+
+
+:- dynamic has_arrow/0.
+
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|     P   |         |         |       G |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         | W       |         |
+-----------------------------------------
+|         |         |   A^    |         |
+-----------------------------------------
+agent_orientation(90)
+agent_health(alive)
+agent_arrows(0)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [yes,no,no,no,no]
+Atoms = [stench]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing north, K=13
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: Stench detected. Asserting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: No breeze. Retracting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(13).
+
+:- dynamic position/3.
+
+position(1, 3, 13).
+position(1, 3, 12).
+position(1, 3, 11).
+position(1, 3, 10).
+position(1, 3, 9).
+position(1, 3, 8).
+position(1, 3, 7).
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(north, 13).
+orientation(east, 12).
+orientation(south, 11).
+orientation(west, 10).
+orientation(north, 9).
+orientation(east, 8).
+orientation(south, 7).
+orientation(west, 6).
+orientation(north, 5).
+orientation(east, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+stench(_, _, 13).
+stench(_, _, 12).
+stench(_, _, 11).
+stench(_, _, 10).
+stench(_, _, 9).
+stench(_, _, 8).
+stench(_, _, 7).
+stench(_, _, 6).
+stench(_, _, 5).
+stench(_, _, 4).
+stench(_, _, 3).
+
+:- dynamic breeze/3.
+
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 12).
+act(turnleft, 11).
+act(turnleft, 10).
+act(turnleft, 9).
+act(turnleft, 8).
+act(turnleft, 7).
+act(turnleft, 6).
+act(turnleft, 5).
+act(turnleft, 4).
+act(shoot, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+wumpus_possible(1, 2).
+wumpus_possible(1, 4).
+wumpus_possible(2, 3).
+
+:- dynamic pit_possible/2.
+
+
+:- dynamic has_arrow/0.
+
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|     P   |         |         |       G |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         | W       |         |
+-----------------------------------------
+|         |         |   <A    |         |
+-----------------------------------------
+agent_orientation(180)
+agent_health(alive)
+agent_arrows(0)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [yes,no,no,no,no]
+Atoms = [stench]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing west, K=14
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: Stench detected. Asserting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: No breeze. Retracting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(14).
+
+:- dynamic position/3.
+
+position(1, 3, 14).
+position(1, 3, 13).
+position(1, 3, 12).
+position(1, 3, 11).
+position(1, 3, 10).
+position(1, 3, 9).
+position(1, 3, 8).
+position(1, 3, 7).
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(west, 14).
+orientation(north, 13).
+orientation(east, 12).
+orientation(south, 11).
+orientation(west, 10).
+orientation(north, 9).
+orientation(east, 8).
+orientation(south, 7).
+orientation(west, 6).
+orientation(north, 5).
+orientation(east, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+stench(_, _, 14).
+stench(_, _, 13).
+stench(_, _, 12).
+stench(_, _, 11).
+stench(_, _, 10).
+stench(_, _, 9).
+stench(_, _, 8).
+stench(_, _, 7).
+stench(_, _, 6).
+stench(_, _, 5).
+stench(_, _, 4).
+stench(_, _, 3).
+
+:- dynamic breeze/3.
+
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 13).
+act(turnleft, 12).
+act(turnleft, 11).
+act(turnleft, 10).
+act(turnleft, 9).
+act(turnleft, 8).
+act(turnleft, 7).
+act(turnleft, 6).
+act(turnleft, 5).
+act(turnleft, 4).
+act(shoot, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+wumpus_possible(1, 2).
+wumpus_possible(1, 4).
+wumpus_possible(2, 3).
+
+:- dynamic pit_possible/2.
+
+
+:- dynamic has_arrow/0.
+
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|     P   |         |         |       G |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         | W       |         |
+-----------------------------------------
+|         |         |   Av    |         |
+-----------------------------------------
+agent_orientation(270)
+agent_health(alive)
+agent_arrows(0)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [yes,no,no,no,no]
+Atoms = [stench]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing south, K=15
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: Stench detected. Asserting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: No breeze. Retracting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(15).
+
+:- dynamic position/3.
+
+position(1, 3, 15).
+position(1, 3, 14).
+position(1, 3, 13).
+position(1, 3, 12).
+position(1, 3, 11).
+position(1, 3, 10).
+position(1, 3, 9).
+position(1, 3, 8).
+position(1, 3, 7).
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(south, 15).
+orientation(west, 14).
+orientation(north, 13).
+orientation(east, 12).
+orientation(south, 11).
+orientation(west, 10).
+orientation(north, 9).
+orientation(east, 8).
+orientation(south, 7).
+orientation(west, 6).
+orientation(north, 5).
+orientation(east, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+stench(_, _, 15).
+stench(_, _, 14).
+stench(_, _, 13).
+stench(_, _, 12).
+stench(_, _, 11).
+stench(_, _, 10).
+stench(_, _, 9).
+stench(_, _, 8).
+stench(_, _, 7).
+stench(_, _, 6).
+stench(_, _, 5).
+stench(_, _, 4).
+stench(_, _, 3).
+
+:- dynamic breeze/3.
+
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 14).
+act(turnleft, 13).
+act(turnleft, 12).
+act(turnleft, 11).
+act(turnleft, 10).
+act(turnleft, 9).
+act(turnleft, 8).
+act(turnleft, 7).
+act(turnleft, 6).
+act(turnleft, 5).
+act(turnleft, 4).
+act(shoot, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+wumpus_possible(1, 2).
+wumpus_possible(1, 4).
+wumpus_possible(2, 3).
+
+:- dynamic pit_possible/2.
+
+
+:- dynamic has_arrow/0.
+
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|     P   |         |         |       G |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         | W       |         |
+-----------------------------------------
+|         |         |   A>    |         |
+-----------------------------------------
+agent_orientation(0)
+agent_health(alive)
+agent_arrows(0)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [yes,no,no,no,no]
+Atoms = [stench]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing east, K=16
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: Stench detected. Asserting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: No breeze. Retracting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(16).
+
+:- dynamic position/3.
+
+position(1, 3, 16).
+position(1, 3, 15).
+position(1, 3, 14).
+position(1, 3, 13).
+position(1, 3, 12).
+position(1, 3, 11).
+position(1, 3, 10).
+position(1, 3, 9).
+position(1, 3, 8).
+position(1, 3, 7).
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(east, 16).
+orientation(south, 15).
+orientation(west, 14).
+orientation(north, 13).
+orientation(east, 12).
+orientation(south, 11).
+orientation(west, 10).
+orientation(north, 9).
+orientation(east, 8).
+orientation(south, 7).
+orientation(west, 6).
+orientation(north, 5).
+orientation(east, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+stench(_, _, 16).
+stench(_, _, 15).
+stench(_, _, 14).
+stench(_, _, 13).
+stench(_, _, 12).
+stench(_, _, 11).
+stench(_, _, 10).
+stench(_, _, 9).
+stench(_, _, 8).
+stench(_, _, 7).
+stench(_, _, 6).
+stench(_, _, 5).
+stench(_, _, 4).
+stench(_, _, 3).
+
+:- dynamic breeze/3.
+
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 15).
+act(turnleft, 14).
+act(turnleft, 13).
+act(turnleft, 12).
+act(turnleft, 11).
+act(turnleft, 10).
+act(turnleft, 9).
+act(turnleft, 8).
+act(turnleft, 7).
+act(turnleft, 6).
+act(turnleft, 5).
+act(turnleft, 4).
+act(shoot, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+wumpus_possible(1, 2).
+wumpus_possible(1, 4).
+wumpus_possible(2, 3).
+
+:- dynamic pit_possible/2.
+
+
+:- dynamic has_arrow/0.
+
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|     P   |         |         |       G |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         | W       |         |
+-----------------------------------------
+|         |         |   A^    |         |
+-----------------------------------------
+agent_orientation(90)
+agent_health(alive)
+agent_arrows(0)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [yes,no,no,no,no]
+Atoms = [stench]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing north, K=17
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: Stench detected. Asserting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: No breeze. Retracting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(17).
+
+:- dynamic position/3.
+
+position(1, 3, 17).
+position(1, 3, 16).
+position(1, 3, 15).
+position(1, 3, 14).
+position(1, 3, 13).
+position(1, 3, 12).
+position(1, 3, 11).
+position(1, 3, 10).
+position(1, 3, 9).
+position(1, 3, 8).
+position(1, 3, 7).
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(north, 17).
+orientation(east, 16).
+orientation(south, 15).
+orientation(west, 14).
+orientation(north, 13).
+orientation(east, 12).
+orientation(south, 11).
+orientation(west, 10).
+orientation(north, 9).
+orientation(east, 8).
+orientation(south, 7).
+orientation(west, 6).
+orientation(north, 5).
+orientation(east, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+stench(_, _, 17).
+stench(_, _, 16).
+stench(_, _, 15).
+stench(_, _, 14).
+stench(_, _, 13).
+stench(_, _, 12).
+stench(_, _, 11).
+stench(_, _, 10).
+stench(_, _, 9).
+stench(_, _, 8).
+stench(_, _, 7).
+stench(_, _, 6).
+stench(_, _, 5).
+stench(_, _, 4).
+stench(_, _, 3).
+
+:- dynamic breeze/3.
+
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 16).
+act(turnleft, 15).
+act(turnleft, 14).
+act(turnleft, 13).
+act(turnleft, 12).
+act(turnleft, 11).
+act(turnleft, 10).
+act(turnleft, 9).
+act(turnleft, 8).
+act(turnleft, 7).
+act(turnleft, 6).
+act(turnleft, 5).
+act(turnleft, 4).
+act(shoot, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+wumpus_possible(1, 2).
+wumpus_possible(1, 4).
+wumpus_possible(2, 3).
+
+:- dynamic pit_possible/2.
+
+
+:- dynamic has_arrow/0.
+
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|     P   |         |         |       G |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         | W       |         |
+-----------------------------------------
+|         |         |   <A    |         |
+-----------------------------------------
+agent_orientation(180)
+agent_health(alive)
+agent_arrows(0)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [yes,no,no,no,no]
+Atoms = [stench]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing west, K=18
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: Stench detected. Asserting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: No breeze. Retracting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(18).
+
+:- dynamic position/3.
+
+position(1, 3, 18).
+position(1, 3, 17).
+position(1, 3, 16).
+position(1, 3, 15).
+position(1, 3, 14).
+position(1, 3, 13).
+position(1, 3, 12).
+position(1, 3, 11).
+position(1, 3, 10).
+position(1, 3, 9).
+position(1, 3, 8).
+position(1, 3, 7).
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(west, 18).
+orientation(north, 17).
+orientation(east, 16).
+orientation(south, 15).
+orientation(west, 14).
+orientation(north, 13).
+orientation(east, 12).
+orientation(south, 11).
+orientation(west, 10).
+orientation(north, 9).
+orientation(east, 8).
+orientation(south, 7).
+orientation(west, 6).
+orientation(north, 5).
+orientation(east, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+stench(_, _, 18).
+stench(_, _, 17).
+stench(_, _, 16).
+stench(_, _, 15).
+stench(_, _, 14).
+stench(_, _, 13).
+stench(_, _, 12).
+stench(_, _, 11).
+stench(_, _, 10).
+stench(_, _, 9).
+stench(_, _, 8).
+stench(_, _, 7).
+stench(_, _, 6).
+stench(_, _, 5).
+stench(_, _, 4).
+stench(_, _, 3).
+
+:- dynamic breeze/3.
+
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 17).
+act(turnleft, 16).
+act(turnleft, 15).
+act(turnleft, 14).
+act(turnleft, 13).
+act(turnleft, 12).
+act(turnleft, 11).
+act(turnleft, 10).
+act(turnleft, 9).
+act(turnleft, 8).
+act(turnleft, 7).
+act(turnleft, 6).
+act(turnleft, 5).
+act(turnleft, 4).
+act(shoot, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+wumpus_possible(1, 2).
+wumpus_possible(1, 4).
+wumpus_possible(2, 3).
+
+:- dynamic pit_possible/2.
+
+
+:- dynamic has_arrow/0.
+
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|     P   |         |         |       G |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         | W       |         |
+-----------------------------------------
+|         |         |   Av    |         |
+-----------------------------------------
+agent_orientation(270)
+agent_health(alive)
+agent_arrows(0)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [yes,no,no,no,no]
+Atoms = [stench]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing south, K=19
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: Stench detected. Asserting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: No breeze. Retracting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(19).
+
+:- dynamic position/3.
+
+position(1, 3, 19).
+position(1, 3, 18).
+position(1, 3, 17).
+position(1, 3, 16).
+position(1, 3, 15).
+position(1, 3, 14).
+position(1, 3, 13).
+position(1, 3, 12).
+position(1, 3, 11).
+position(1, 3, 10).
+position(1, 3, 9).
+position(1, 3, 8).
+position(1, 3, 7).
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(south, 19).
+orientation(west, 18).
+orientation(north, 17).
+orientation(east, 16).
+orientation(south, 15).
+orientation(west, 14).
+orientation(north, 13).
+orientation(east, 12).
+orientation(south, 11).
+orientation(west, 10).
+orientation(north, 9).
+orientation(east, 8).
+orientation(south, 7).
+orientation(west, 6).
+orientation(north, 5).
+orientation(east, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+stench(_, _, 19).
+stench(_, _, 18).
+stench(_, _, 17).
+stench(_, _, 16).
+stench(_, _, 15).
+stench(_, _, 14).
+stench(_, _, 13).
+stench(_, _, 12).
+stench(_, _, 11).
+stench(_, _, 10).
+stench(_, _, 9).
+stench(_, _, 8).
+stench(_, _, 7).
+stench(_, _, 6).
+stench(_, _, 5).
+stench(_, _, 4).
+stench(_, _, 3).
+
+:- dynamic breeze/3.
+
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 18).
+act(turnleft, 17).
+act(turnleft, 16).
+act(turnleft, 15).
+act(turnleft, 14).
+act(turnleft, 13).
+act(turnleft, 12).
+act(turnleft, 11).
+act(turnleft, 10).
+act(turnleft, 9).
+act(turnleft, 8).
+act(turnleft, 7).
+act(turnleft, 6).
+act(turnleft, 5).
+act(turnleft, 4).
+act(shoot, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+wumpus_possible(1, 2).
+wumpus_possible(1, 4).
+wumpus_possible(2, 3).
+
+:- dynamic pit_possible/2.
+
+
+:- dynamic has_arrow/0.
+
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|     P   |         |         |       G |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         | W       |         |
+-----------------------------------------
+|         |         |   A>    |         |
+-----------------------------------------
+agent_orientation(0)
+agent_health(alive)
+agent_arrows(0)
+agent_gold(0)
+--- my_agent: Starting ---
+
+Log_see
+Percepts = [yes,no,no,no,no]
+Atoms = [stench]
+--- my_agent: see completed ---
+--- next: Starting ---
+--- next: current_interaction completed ---
+--- next: effect completed ---
+  update_knowledge: Starting...
+  update_knowledge: World extent is 4
+  update_knowledge: Agent at (1,3), facing east, K=20
+  update_knowledge: Current square marked visited/safe.
+  update_knowledge: Checking for stench percept.
+  update_knowledge: Stench detected. Asserting wumpus_possible for adjacent.
+  update_knowledge: Stench inference completed.
+  update_knowledge: Checking for breeze percept.
+  update_knowledge: No breeze. Retracting pit_possible for adjacent.
+  update_knowledge: Breeze inference completed.
+  update_knowledge: Checking for no stench/breeze.
+  update_knowledge: Safe adjacent inference completed.
+  update_knowledge: Checking for bump percept.
+  update_knowledge: Bump inference completed.
+  update_knowledge: Checking for scream percept.
+  update_knowledge: Scream inference completed.
+  update_knowledge: Finished.
+--- next: update_knowledge completed ---
+--- next: Calling evolution...
+--- evolution: Starting ---
+  evol: Checking glitter...
+  evol: Checking bump...
+  evol: Checking scream...
+--- evolution: Finished ---
+--- next: evolution completed ---
+
+Log_next
+Knowledge Base
+:- dynamic interaction/1.
+
+interaction(20).
+
+:- dynamic position/3.
+
+position(1, 3, 20).
+position(1, 3, 19).
+position(1, 3, 18).
+position(1, 3, 17).
+position(1, 3, 16).
+position(1, 3, 15).
+position(1, 3, 14).
+position(1, 3, 13).
+position(1, 3, 12).
+position(1, 3, 11).
+position(1, 3, 10).
+position(1, 3, 9).
+position(1, 3, 8).
+position(1, 3, 7).
+position(1, 3, 6).
+position(1, 3, 5).
+position(1, 3, 4).
+position(1, 3, 3).
+position(1, 2, 2).
+position(1, 1, 1).
+position(1, 1, 0).
+
+:- dynamic orientation/2.
+
+orientation(east, 20).
+orientation(south, 19).
+orientation(west, 18).
+orientation(north, 17).
+orientation(east, 16).
+orientation(south, 15).
+orientation(west, 14).
+orientation(north, 13).
+orientation(east, 12).
+orientation(south, 11).
+orientation(west, 10).
+orientation(north, 9).
+orientation(east, 8).
+orientation(south, 7).
+orientation(west, 6).
+orientation(north, 5).
+orientation(east, 4).
+orientation(east, 3).
+orientation(east, 2).
+orientation(east, 1).
+orientation(east, 0).
+
+:- dynamic stench/3.
+
+stench(_, _, 20).
+stench(_, _, 19).
+stench(_, _, 18).
+stench(_, _, 17).
+stench(_, _, 16).
+stench(_, _, 15).
+stench(_, _, 14).
+stench(_, _, 13).
+stench(_, _, 12).
+stench(_, _, 11).
+stench(_, _, 10).
+stench(_, _, 9).
+stench(_, _, 8).
+stench(_, _, 7).
+stench(_, _, 6).
+stench(_, _, 5).
+stench(_, _, 4).
+stench(_, _, 3).
+
+:- dynamic breeze/3.
+
+
+:- dynamic glitter/3.
+
+
+:- dynamic bump/3.
+
+
+:- dynamic scream/3.
+
+
+:- dynamic wall/3.
+
+
+:- dynamic gold1/2.
+
+
+:- dynamic act/2.
+
+act(turnleft, 19).
+act(turnleft, 18).
+act(turnleft, 17).
+act(turnleft, 16).
+act(turnleft, 15).
+act(turnleft, 14).
+act(turnleft, 13).
+act(turnleft, 12).
+act(turnleft, 11).
+act(turnleft, 10).
+act(turnleft, 9).
+act(turnleft, 8).
+act(turnleft, 7).
+act(turnleft, 6).
+act(turnleft, 5).
+act(turnleft, 4).
+act(shoot, 3).
+act(goforward, 2).
+act(goforward, 1).
+act([], 0).
+
+:- dynamic visited/2.
+
+visited(1, 3).
+visited(1, 2).
+visited(1, 1).
+
+:- dynamic safe/2.
+
+safe(1, 3).
+safe(2, 2).
+safe(1, 2).
+safe(2, 1).
+safe(1, 1).
+
+:- dynamic wumpus_possible/2.
+
+wumpus_possible(1, 2).
+wumpus_possible(1, 4).
+wumpus_possible(2, 3).
+
+:- dynamic pit_possible/2.
+
+
+:- dynamic has_arrow/0.
+
+
+:- dynamic wumpus_alive/0.
+
+wumpus_alive.
+
+:- dynamic wumpus_dead/0.
+
+
+:- dynamic holding_gold/0.
+
+
+--- next: Finished ---
+--- my_agent: next completed ---
+--- action: Attempting to find action...
+Trying grab...
+Trying climb...
+Trying shoot...
+Trying goforward (unvisited safe)...
+Trying turnleft (to unvisited safe)...
+Trying turnright (to unvisited safe)...
+Trying goforward (visited safe)...
+Trying turnleft (fallback)...
+
+Log_action
+Action = turnleft
+--- action: Finished ---
+--- my_agent: action completed ---
+--- my_agent: Finished ---
+
+Executing turnleft
+
+-----------------------------------------
+|     P   |         |         |       G |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         | W       |         |
+-----------------------------------------
+|         |         |   A^    |         |
+-----------------------------------------
+agent_orientation(90)
+agent_health(alive)
+agent_arrows(0)
+agent_gold(0)
+
+Executing restart
+
+-----------------------------------------
+|     P   |         |         |       G |
+-----------------------------------------
+|         |         |         |         |
+-----------------------------------------
+|         |         | W       |         |
+-----------------------------------------
+|   A>    |         |         |         |
+-----------------------------------------
+agent_orientation(0)
+agent_health(alive)
+agent_arrows(1)
+agent_gold(0)
+--- restart_agent: Starting ---
+--- init_agent: Starting ---
+  retractall_predicates: Starting...
+  retractall_predicates: Finished.
+--- init_agent: retractall_predicates completed ---
+  assertall_current: Starting...
+  assertall_current: Finished.
+--- init_agent: assertall_current completed ---
+--- init_agent: Finished ---
+--- restart_agent: Finished ---
+  Actions = []
+****************
+Tested: 2
+Score: -20[0.0]
+Time: 180.5[70.0035713374682]
+****************
